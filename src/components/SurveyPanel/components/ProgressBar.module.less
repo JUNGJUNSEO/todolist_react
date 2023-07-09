@@ -1,0 +1,47 @@
+.container {
+    width: 700px;
+}
+
+.progressBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: gainsboro;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        border-radius: 5px;
+        height: 20px;
+        width: 100%;
+        z-index: -1;
+        transition: 0.4s ease;
+    }
+
+    .progress {
+        position: absolute;
+        background-color: black;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        border-radius: 5px;
+        height: 20px;
+        width: 50%;
+        z-index: -1;
+        transition: 3s ease;
+    }
+    .circle {
+        background-color: gainsboro;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        transition: 3s ease;
+    }
+    .circle.active{
+        background-color: black;
+    }
+}

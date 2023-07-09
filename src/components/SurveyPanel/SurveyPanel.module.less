@@ -1,0 +1,81 @@
+.panel {
+    position: relative;
+    .header{
+        position:absolute;
+        top:0;
+        left:0;
+    }
+    .prevBtn {
+        position: absolute;
+        width: 246px;
+        height: 97px;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .nextBtn {
+        position: absolute;
+        width: 246px;
+        height: 97px;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: red;
+    }
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+}
+@keyframes slideinfromleft {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0%;
+    }
+}
+@keyframes slideout {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: -100%;
+    }
+}
+@keyframes slideouttoright {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 100%;
+    }
+}
+.slideSetting() {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+ }
+.slideInFromRight{
+    .slideSetting();
+    animation-name: slidein;
+}
+.slideInFromLeft{
+    .slideSetting();
+    animation-name: slideinfromleft;
+}
+.slideOut{
+    .slideSetting();
+    animation-name: slideout;
+}
+.slideOutToRight{
+    .slideSetting();
+    animation-name: slideouttoright;
+}
+.prevPage{
+    margin-left: -100%;
+    pointer-events: none;
+}
