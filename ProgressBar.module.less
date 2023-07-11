@@ -1,0 +1,58 @@
+.container {
+  width: 1600px;
+}
+
+.progressBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: gainsboro;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    height: 9px;
+    width: 100%;
+    transition: 0.4s ease;
+  }
+
+  .progress {
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    height: 9px;
+    width: 50%;
+    transition: 0.5s ease;
+  }
+  .circleBox {
+    position: relative;
+
+    .circle {
+        background-color: gainsboro;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        transition: 0.5s ease;
+        &.active{
+            background-color: black;
+        }
+    }
+    .text {
+        color: black;
+        font-size: 25px;
+        position: absolute;
+        white-space: nowrap;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+  }
+}

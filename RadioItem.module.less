@@ -1,0 +1,39 @@
+@import "../../../../style/CommonStyle.module.less";
+@import "../../../../style/utils.module.less";
+
+
+.radioItem {
+  font-family: "LGSmartUIR";
+
+}
+
+.normal {
+  background-color: @colorb4b4b4;
+  padding: 10px 56px;
+  border-radius: 28px;
+  color: @colorffffff;
+  &:focus{
+    background-color: @color222222;
+  }
+  &.active{
+    background-color: @color222222;
+  }
+
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .image {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: @colorffffff;
+    margin-bottom: 5px;
+  }
+  .text {
+    font-size: 25px;
+  }
+}
